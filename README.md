@@ -4,7 +4,7 @@ Accounts and Transactions Management Project
 ## Project Description:
 A SpringBoot REST API Accounts and Transactions management application with in memory h2 database.
 
-## Commands to execute the app:
+## Commands to execute the application:
 Prerequisities:-  mvn 3.5.4 and java8  
   mvn clean package  
   mvn spring-boot:run  
@@ -24,7 +24,8 @@ This application exposes the following APIs:
   - data.sql contains table structure initialised on h2 DB and some predefined values.  
   - src/main/test/BankingApplicationTests.java contains end to end integration tests.  
   - Before running the junit, comment the insert queries on data.sql.
-  - application.properties within src/main/resources contain H2 DB connection details
+  - application.properties within src/main/resources contain H2 DB connection details.
+  - More focus on integration test than to individual junits. As per requirement doc, havent spent much efforts on junits. Can provide more detailed junits if required.
 
 ## Examples
 ### Example endpoint and request to post transaction from one account to another
