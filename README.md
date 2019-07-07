@@ -12,9 +12,9 @@ Prerequisities:-  mvn 3.2+ and java8
 ## API Catalogue 
 This application exposes the following APIs:
   - GET /v1/accounts/{accountNumber}  
-   Retrieves all account details of the given accountNumber   
+      Retrieves all account details of the given accountNumber   
   - GET /v1/accounts/{accountNumber}/transactions   
-   Lists all transactions against the account number either as a from or to account.  
+      Lists all transactions against the account number either as a from or to account.  
   - POST /v1/accounts/{accountNumber}/transactions  
       POST a transaction from one account to another account  
 
