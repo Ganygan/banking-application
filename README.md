@@ -5,9 +5,9 @@ Accounts and Transactions Management Project
 A SpringBoot REST API Accounts and Transactions management application with in memory h2 database.
 
 ## Commands to execute the app:
-Prerequisities:-  mvn 3.2+ and java8
-mvn clean package
-mvn spring-boot:run
+Prerequisities:-  mvn 3.2+ and java8  
+  mvn clean package  
+  mvn spring-boot:run  
 
 ## API Catalogue 
 This application exposes the following APIs:
