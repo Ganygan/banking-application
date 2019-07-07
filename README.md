@@ -11,34 +11,36 @@ Prerequisities:-  mvn 3.2+ and java8
 
 ## API Catalogue 
 This application exposes the following APIs:
-- GET /v1/accounts/{accountNumber}
-    Retrieves all account details of the given accountNumber 
-- GET /v1/accounts/{accountNumber}/transactions 
-    Lists all transactions against the account number either as a from or to account.
-- POST /v1/accounts/{accountNumber}/transactions
-    POST a transaction from one account to another account
+  - GET /v1/accounts/{accountNumber}  
+   Retrieves all account details of the given accountNumber   
+  - GET /v1/accounts/{accountNumber}/transactions   
+   Lists all transactions against the account number either as a from or to account.  
+  - POST /v1/accounts/{accountNumber}/transactions  
+      POST a transaction from one account to another account  
 
 ## Key info:
-- data.sql contains table structure initialised on h2 DB and some predefined values.
-- BankingApplicationTests.java contains end to end integration tests.
-- Before running the junit, comment the insert queries on data.sql.
+  - data.sql contains table structure initialised on h2 DB and some predefined values.  
+  - BankingApplicationTests.java contains end to end integration tests.  
+  - Before running the junit, comment the insert queries on data.sql.  
 
 ## Examples
 ### Example endpoint and request to post transaction from one account to another
 POST http://localhost:8080/v1/accounts/123456/transactions
 
 #### Request
+```json
 {
     "toAccountNumber": 123789,
     "amountToBeTransferred": 500,
     "transactionType": "WIRE",
     "transactionReference": "Testing"
 }
-
+```
 ### Example endpoint and response to retrieve account details
 GET http://localhost:8080/v1/accounts/123456
 
 #### Response
+```json
 {
     "account": {
         "id": 1,
@@ -51,11 +53,12 @@ GET http://localhost:8080/v1/accounts/123456
         "accountBalance": 900
     }
 }
-
+```
 ### Example endpoint and response to list all transactions
 GET http://localhost:8080/v1/accounts/123789/transactions 
 
 #### Response
+```json
 {
     "listTransactions": [
         {
@@ -69,3 +72,4 @@ GET http://localhost:8080/v1/accounts/123789/transactions
         }
     ]
 }
+```
