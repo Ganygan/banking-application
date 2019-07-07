@@ -22,8 +22,9 @@ This application exposes the following APIs:
   ---
 ## Key info:
   - data.sql contains table structure initialised on h2 DB and some predefined values.  
-  - BankingApplicationTests.java contains end to end integration tests.  
-  - Before running the junit, comment the insert queries on data.sql.  
+  - src/main/test/BankingApplicationTests.java contains end to end integration tests.  
+  - Before running the junit, comment the insert queries on data.sql.
+  - application.properties within src/main/resources contain H2 DB connection details
 
 ## Examples
 ### Example endpoint and request to post transaction from one account to another
